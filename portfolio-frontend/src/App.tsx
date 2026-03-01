@@ -12,8 +12,8 @@ const PROFILE = {
   email: "dl56386994@gmail.com",
   links: {
     linkedin: "https://www.linkedin.com/in/daniel-liu-987b27252/",
-    github: "https://github.com/", // <-- put your GitHub profile link
-    resume: "#", // <-- add your resume link later (Google Drive / PDF)
+    github: "https://github.com/d4n1elliu", // <-- put your GitHub profile link
+    resume: "./Daniel-Liu-Resume-2025.pdf", // <-- add your resume link later (Google Drive / PDF)
   },
   about: [
     "I build modern web and mobile experiences that combine frontend engineering with user-centred design.",
@@ -215,6 +215,9 @@ function Nav() {
           </ButtonLink>
           <ButtonLink href={PROFILE.links.github} variant="secondary">
             GitHub
+          </ButtonLink>
+          <ButtonLink href={PROFILE.links.resume} variant="secondary">
+            View Resume
           </ButtonLink>
         </div>
       </div>
