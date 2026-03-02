@@ -11,7 +11,7 @@ export function Education() {
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <div>
                 <div className="text-sm font-semibold text-zinc-100">{ed.org}</div>
-                <div className="mt-1 text-sm text-zinc-300">{ed.detail}</div>
+                <div className="mt-1 text-sm text-zinc-300">{ed.details}</div>
               </div>
               <div className="text-xs text-zinc-400">{ed.time}</div>
             </div>

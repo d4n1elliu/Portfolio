@@ -33,14 +33,8 @@ export function Projects() {
             </div>
 
             <div className="mt-2 flex flex-wrap gap-2">
-              <ButtonLink href={p.links.live} variant="secondary">
-                Live
-              </ButtonLink>
-              <ButtonLink href={p.links.code} variant="secondary">
-                Code
-              </ButtonLink>
-              <ButtonLink href={p.links.caseStudy} variant="secondary">
-                Case study
+              <ButtonLink href={p.links.link} variant="secondary">
+                Link
               </ButtonLink>
             </div>
           </Card>

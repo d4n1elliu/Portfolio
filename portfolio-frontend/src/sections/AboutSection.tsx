@@ -17,15 +17,15 @@ export function About() {
 
         <p>
           My recent work includes building React + TypeScript applications,
-          integrating REST APIs with ASP.NET Core backends, and deploying
+          integrating REST APIs with ASP.NET Core backends and deploying
           projects using Azure and CI/CD pipelines. I focus on writing clean,
           maintainable code and designing interfaces that feel intuitive.
         </p>
 
         <p>
           I’m particularly interested in software engineering roles where I can
-          contribute to meaningful products, collaborate with strong teams,
-          and continue growing my technical depth in frontend, backend, and
+          contribute to meaningful products, collaborate with strong teams 
+          and continue growing my technical depth in frontend, backend and
           system design.
         </p>
       </div>
