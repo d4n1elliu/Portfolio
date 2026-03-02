@@ -71,7 +71,7 @@ export const PROFILE = {
     {
         role: "Independent Software Developer",
         org: "Self-employed",
-        time: "Jan 2022 — Present",
+        time: "Feb 2023 — Present",
         points: [
             "Built and iterated on personal and university projects with a focus on clean UX.",
             "Developed reusable UI components and improved responsiveness and accessibility.",
