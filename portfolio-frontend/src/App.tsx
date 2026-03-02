@@ -4,6 +4,7 @@
 // Modern 1-page portfolio template (React + Vite + Tailwind)
 // Temporary Hard Coded Portfolio Website
 
+// User profile section
 const PROFILE = {
   name: "Daniel Liu",
   headline:
@@ -36,6 +37,8 @@ const PROFILE = {
     "C#",
     "Java",
   ],
+
+  // Projects sections
   projects: [
     {
       title: "EduMap",
@@ -74,6 +77,8 @@ const PROFILE = {
       },
     },
   ],
+
+   // Experience sections
   experience: [
     {
       role: "Independent Software Developer",
@@ -94,6 +99,8 @@ const PROFILE = {
       ],
     },
   ],
+
+  // Education sections
   education: [
     {
       org: "University of Technology Sydney (UTS)",
@@ -386,6 +393,7 @@ function Education() {
   );
 }
 
+// Contact me section
 function Contact() {
   return (
     <Section
@@ -414,6 +422,7 @@ function Contact() {
   );
 }
 
+// Footer section
 function Footer() {
   return (
     <footer className="py-10 text-center text-xs text-zinc-500">
