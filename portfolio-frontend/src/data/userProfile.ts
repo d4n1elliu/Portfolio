@@ -1,3 +1,4 @@
+// Personal bio
 export const PROFILE = {
     name: "Daniel Liu",
     headline:
@@ -32,7 +33,7 @@ export const PROFILE = {
         "Canva",
     ],
 
-    // Projects sections
+    // Projects section
     projects: [
         {
             title: "EduMap",
@@ -66,7 +67,7 @@ export const PROFILE = {
         },
     ],
 
-   // Experience sections
+   // Experiences section
     experience: [
     {
         role: "Independent Software Developer",
@@ -88,7 +89,7 @@ export const PROFILE = {
     },
   ],
 
-  // Education sections
+  // Educations section
   education: [
     {
         org: "University of Technology Sydney (UTS)",
