@@ -37,7 +37,7 @@ export const PROFILE = {
     projects: [
         {
             title: "EduMap",
-            tag: "Capstone / UI/UX",
+            tag: "Capstone Project",
             description:
                 "Student-focused web platform with onboarding flows and interactive modules. Built with React + Tailwind and a focus on user-centred design.",
             tech: ["React", "TailwindCSS", "Javascript", "Microsoft Azure", "PostgreSQL", "Python"],
@@ -84,7 +84,7 @@ export const PROFILE = {
         time: "Sep 2019 — Oct 2019",
         points: [
             "Customer-facing support in a fast-paced environment.",
-            "Maintained stock, organisation, and operational efficiency.",
+            "Maintained stock, organisation and operational efficiency.",
       ],
     },
   ],
