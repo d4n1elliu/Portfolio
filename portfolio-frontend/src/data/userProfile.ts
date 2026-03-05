@@ -2,7 +2,7 @@
 export const PROFILE = {
     name: "Daniel Liu",
     headline:
-        "Penultimate-year BCompSc (Hons) @ UTS · FullStack Developer · IOS Engineer · UI/UX (Interaction Design) · Open to Internships",
+        "Penultimate-year BCompSc (Hons) @ UTS · FullStack Developer · IOS Developer · UI/UX Designer · Open to Internships",
     location: "Sydney, NSW, Australia",
     email: "dl56386994@gmail.com",
     links: {
