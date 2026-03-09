@@ -4,6 +4,13 @@ import { Card } from "../components/ui/Card";
 import { Pill } from "../components/ui/Pill";
 import { ButtonLink } from "../components/ui/ButtonLink";
 
+// Creating responsive grid of project cards using data from PROFILE.projects.
+// Each card displays:
+// Project title
+// Project tag/category
+// Short description
+// Technology stack
+// External project link
 export function Projects() {
   return (
     <Section
