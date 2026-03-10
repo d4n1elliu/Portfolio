@@ -3,6 +3,8 @@ import { Card } from "../components/ui/Card";
 import { PROFILE } from "../data/userProfile";
 import { Pill } from "../components/ui/Pill";
 
+// Displays range of technical skills from PROFILE.SKILLS
+// Pill tag is a small UI label that highlights my individual skills & technology usage
 export function Skills() {
   return (
     <Section
