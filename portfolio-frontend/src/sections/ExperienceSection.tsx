@@ -2,6 +2,7 @@ import { Section } from "../components/ui/Section";
 import { PROFILE } from "../data/userProfile";
 import { Card } from "../components/ui/Card";
 
+// Description for all work experiences/side projects
 export function Experience() {
   return (
     <Section id="experience" title="Experience" subtitle="Short, impact-focused bullets.">
