@@ -2,6 +2,9 @@ import { Section } from "../components/ui/Section";
 import { PROFILE } from "../data/userProfile";
 import { Card } from "../components/ui/Card";
 
+// EducationSection Component
+// Displaying user's educational background by mapping data from PROFILE.education.
+// Each education entry is rendered using the reusable Card component within the Section layout.
 export function Education() {
   return (
     <Section id="education" title="Education">
