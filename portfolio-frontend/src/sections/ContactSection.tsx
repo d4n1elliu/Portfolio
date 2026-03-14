@@ -3,6 +3,7 @@ import { Card } from "../components/ui/Card";
 import { PROFILE } from "../data/userProfile";
 import { ButtonLink } from "../components/ui/ButtonLink";
 
+// Contact section displaying email and social links (LinkedIn, GitHub) for users to reach out.
 export function Contact() {
   return (
     <Section
