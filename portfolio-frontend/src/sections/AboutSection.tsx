@@ -1,5 +1,11 @@
 import { Section } from "../components/ui/Section";
 
+// This component renders the "About" section for the portfolio website
+// It provides a short intro description about myself 
+// highlighting my background interest for computer science
+// This section contains reusable UI component and 
+// contains descriptive paragraphs outlining technical experience, 
+// deveolopment focus and career interests
 export function About() {
   return (
     <Section
