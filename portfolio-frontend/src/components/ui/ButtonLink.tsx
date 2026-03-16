@@ -1,5 +1,8 @@
 import { classNames } from "../../lib/classNames";
-
+// Reusable ButtonLink Component 
+// Provides a styled anchor element that looks like a button.
+// Used throughout the portfolio for external links such as
+// GitHub repositories, live demos or contact links.
 export function ButtonLink({
   href,
   children,
