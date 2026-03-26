@@ -71,7 +71,7 @@ export const PROFILE = {
     experience: [
     {
         role: "Independent Software Developer",
-        org: "Self-employed",
+        org: "Independent Development",
         time: "Feb 2023 — Present",
         points: [
             "Built and iterated on personal and university projects with a focus on clean UX.",
