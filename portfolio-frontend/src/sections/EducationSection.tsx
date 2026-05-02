@@ -1,24 +1,20 @@
 import { Section } from "../components/ui/Section";
+import { SectionHeader } from "../components/ui/SectionHeader";
+import { TimelineRow } from "../components/ui/TimelineRow";
 import { PROFILE } from "../data/userProfile";
-import { Card } from "../components/ui/Card";
 
-// EducationSection Component
-// Displaying user's educational background by mapping data from PROFILE.education.
-// Each education entry is rendered using the reusable Card component within the Section layout.
 export function Education() {
   return (
-    <Section id="education" title="Education">
-      <div className="grid gap-4">
+    <Section id="education">
+      <SectionHeader title="Education" />
+      <div className="divide-y divide-zinc-200">
         {PROFILE.education.map((ed) => (
-          <Card key={ed.org}>
-            <div className="flex flex-wrap items-baseline justify-between gap-2">
-              <div>
-                <div className="text-sm font-semibold text-zinc-100">{ed.org}</div>
-                <div className="mt-1 text-sm text-zinc-300">{ed.details}</div>
-              </div>
-              <div className="text-xs text-zinc-400">{ed.time}</div>
-            </div>
-          </Card>
+          <TimelineRow
+            key={ed.org}
+            period={ed.time}
+            title={ed.org}
+            subtitle={ed.details}
+          />
         ))}
       </div>
     </Section>

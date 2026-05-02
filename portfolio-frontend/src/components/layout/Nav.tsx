@@ -1,4 +1,3 @@
-import { ButtonLink } from "../../components/ui/ButtonLink";
 import { PROFILE } from "../../data/userProfile";
 
 export function Nav() {
@@ -7,39 +6,36 @@ export function Nav() {
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
-    { label: "Education", href: "#education" },
+    { label: "Resume", href: "#resume" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <div className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <a href="#top" className="font-semibold tracking-tight text-zinc-100">
+    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-[#f8f5ef]">
+      <div className="flex items-center justify-between px-8 py-4 md:px-16">
+        <a href="#top" className="text-sm font-medium tracking-wide text-zinc-900">
           {PROFILE.name}
         </a>
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden gap-8 md:flex">
           {items.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-zinc-300 hover:text-white"
+              className="text-sm text-zinc-500 transition-colors hover:text-zinc-900"
             >
               {item.label}
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
-          <ButtonLink href={PROFILE.links.linkedin} variant="secondary">
-            LinkedIn
-          </ButtonLink>
-          <ButtonLink href={PROFILE.links.github} variant="secondary">
-            GitHub
-          </ButtonLink>
-          <ButtonLink href={PROFILE.links.resume} variant="secondary">
-            View Resume
-          </ButtonLink>
-        </div>
+        <a
+          href={PROFILE.links.resume}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-none bg-zinc-900 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700"
+        >
+          Resume
+        </a>
       </div>
-    </div>
+    </header>
   );
 }

@@ -1,24 +1,17 @@
 import { Section } from "../components/ui/Section";
-import { Card } from "../components/ui/Card";
+import { SectionHeader } from "../components/ui/SectionHeader";
+import { FeatureItem } from "../components/ui/FeatureItem";
 import { PROFILE } from "../data/userProfile";
-import { Pill } from "../components/ui/Pill";
 
-// Displays range of technical skills from PROFILE.SKILLS
-// Pill tag is a small UI label that highlights my individual skills & technology usage
 export function Skills() {
   return (
-    <Section
-      id="skills"
-      title="Skills"
-      subtitle="Keep this tight — only list what you’re happy to be interviewed on."
-    >
-      <Card>
-        <div className="flex flex-wrap gap-2">
-          {PROFILE.skills.map((s) => (
-            <Pill key={s}>{s}</Pill>
-          ))}
-        </div>
-      </Card>
+    <Section id="skills">
+      <SectionHeader title="Key Skills" />
+      <div className="grid gap-12 md:grid-cols-3">
+        {PROFILE.skills.map((s) => (
+          <FeatureItem key={s.title} shape={s.shape} title={s.title} description={s.description} />
+        ))}
+      </div>
     </Section>
   );
 }
