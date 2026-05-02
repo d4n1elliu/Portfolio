@@ -48,6 +48,16 @@ export const PROFILE = {
         "A fun interactive bubble-popping game built as a personal project to explore game mechanics and DOM interactions.",
       tech: ["HTML/CSS", "JavaScript"],
       links: { link: "https://github.com/d4n1elliu" },
+      comingSoon: false as const,
+    },
+    {
+      title: "Spoti-List",
+      tag: "Personal Project",
+      description:
+        "Spotify playlist analytics dashboard. Visualises playlist insights with reusable components and charts.",
+      tech: ["React", "TailwindCSS", "TypeScript", "Node.js", "Microsoft Azure"],
+      links: { link: "https://github.com/d4n1elliu/Spoti-list" },
+      comingSoon: true as const,
     },
   ],
 
