@@ -2,7 +2,7 @@ export const PROFILE = {
   name: "Daniel Liu",
   headline: "FullStack Developer",
   location: "Sydney, NSW, Australia",
-  email: "dl56386994@gmail.com",
+  email: "ziyangliu2.work@gmail.com",
   links: {
     linkedin: "https://www.linkedin.com/in/daniel-liu-987b27252/",
     github: "https://github.com/d4n1elliu",
@@ -56,7 +56,7 @@ export const PROFILE = {
       description:
         "Spotify playlist analytics dashboard. Visualises playlist insights with reusable components and charts.",
       tech: ["React", "TailwindCSS", "TypeScript", "Node.js", "Microsoft Azure"],
-      links: { link: "https://github.com/d4n1elliu/Spoti-list" },
+      links: { link: "https://spoti-list.vercel.app/" },
       comingSoon: true as const,
     },
   ],
