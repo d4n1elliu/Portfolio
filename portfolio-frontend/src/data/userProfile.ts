@@ -6,7 +6,7 @@ export const PROFILE = {
   links: {
     linkedin: "https://www.linkedin.com/in/daniel-liu-987b27252/",
     github: "https://github.com/d4n1elliu",
-    resume: "/Daniel-Liu-Resume-2026",
+    resume: "/Daniel-Liu-Resume-2026.pdf",
   },
 
   about: [
