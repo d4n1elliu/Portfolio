@@ -3,7 +3,7 @@ import { ProjectCard } from "../components/ui/ProjectCard";
 
 export function Projects() {
   return (
-    <section id="projects" className="mt-10 px-8 md:px-16">
+    <section id="projects" className="mt-10 bg-zinc-900 px-8 pb-8 md:px-16">
       <div className="grid gap-4 md:grid-cols-2">
         {PROFILE.projects.map((p) => (
           <ProjectCard
