@@ -2,7 +2,7 @@ import { PROFILE } from "../../data/userProfile";
 
 export function Hero() {
   return (
-    <section className="px-8 pb-0 pt-16 md:px-16">
+    <section className="px-8 pb-0 pt-10 md:px-16">
       <h1
         className="font-light leading-none tracking-tight text-zinc-900"
         style={{ fontSize: "clamp(3.5rem, 9vw, 8.5rem)", fontWeight: 300 }}
