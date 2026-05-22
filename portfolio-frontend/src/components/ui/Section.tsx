@@ -14,7 +14,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={classNames("px-8 py-20 md:px-16", alt ? "bg-[#f0ebe0]" : "", className ?? "")}
+      className={classNames("px-8 pt-10 pb-16 md:px-16", alt ? "bg-[#f0ebe0]" : "", className ?? "")}
     >
       {children}
     </section>
