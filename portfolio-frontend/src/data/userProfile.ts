@@ -51,13 +51,22 @@ export const PROFILE = {
       comingSoon: false as const,
     },
     {
-      title: "Spoti-List",
+      title: "Soleri",
       tag: "Personal Project",
       description:
-        "Spotify playlist analytics dashboard. Visualises playlist insights with reusable components and charts.",
-      tech: ["React", "TailwindCSS", "TypeScript", "Node.js", "Microsoft Azure"],
-      links: { link: "https://spoti-list.vercel.app/" },
-      comingSoon: true as const,
+        "Personal Spotify analytics dashboard with listening heatmaps, discovery rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. Built with React 19, TypeScript and Tailwind CSS, deployed on Vercel with OAuth handled via Vercel Serverless Functions.",
+      tech: ["React", "TypeScript", "TailwindCSS", "Node.js", "Vercel"],
+      links: { link: "https://github.com/d4n1elliu/Soleri" },
+      comingSoon: false as const,
+    },
+    {
+      title: "MemeSOL",
+      tag: "Group Project",
+      description:
+        "Cryptocurrency wallet iOS app built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins. Features secure authentication, QR code based transfers, transaction tracking and responsive mobile UI. Collaborated with a team through GitHub for version control.",
+      tech: ["Swift", "SwiftUI", "ASP.NET Core", "GitHub"],
+      links: { link: "https://github.com/sunwoo101/MemeSOL" },
+      comingSoon: false as const,
     },
   ],
 

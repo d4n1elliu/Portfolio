@@ -7,8 +7,11 @@ const projectAssets: Record<string, { image?: string; gradient: string }> = {
     image: "/images/bubblepop.png",
     gradient: "linear-gradient(135deg, #a8c8f0 0%, #78a8e0 50%, #5890d0 100%)",
   },
-  "Spoti-List": {
+  Soleri: {
     gradient: "linear-gradient(135deg, #1db954 0%, #158a3e 50%, #0d5c2a 100%)",
+  },
+  MemeSOL: {
+    gradient: "linear-gradient(135deg, #f5c518 0%, #c47d00 50%, #7a4500 100%)",
   },
 };
 
