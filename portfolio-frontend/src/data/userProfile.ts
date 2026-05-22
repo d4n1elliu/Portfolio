@@ -47,7 +47,7 @@ export const PROFILE = {
       description:
         "A fun interactive bubble-popping game built as a personal project to explore game mechanics and DOM interactions.",
       tech: ["HTML/CSS", "JavaScript"],
-      links: { link: "https://github.com/d4n1elliu" },
+      links: { link: "https://github.com/d4n1elliu/Bubble-Pop" },
       comingSoon: false as const,
     },
     {
