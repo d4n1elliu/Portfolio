@@ -7,7 +7,7 @@ export function Hero() {
         className="font-light leading-none tracking-tight text-zinc-900"
         style={{ fontSize: "clamp(3.5rem, 9vw, 8.5rem)", fontWeight: 300 }}
       >
-        Full Stack Developer
+        Full Stack Engineer
       </h1>
 
       <div className="mt-8 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
