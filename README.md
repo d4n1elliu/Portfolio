@@ -59,6 +59,8 @@ Key Feature: Implemented weighted probability logic for bubble spawning (e.g., R
 
 Focus: Core gameplay mechanics, UI/UX design, and performance benchmarking.
 
+Demo: https://www.youtube.com/watch?v=WRwgMMRJDdI
+
 ## Research Projects
 
 ### TimeLLM-vs-LSTM-Benchmarking
