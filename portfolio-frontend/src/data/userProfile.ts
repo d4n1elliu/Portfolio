@@ -9,8 +9,10 @@ export const PROFILE = {
     resume: "/Daniel-Liu-Resume-2026.pdf",
   },
 
+  avatar: "/images/profile.jpg",
+
   about: [
-    "I'm a penultimate year Computer Science (Honours) student at UTS with a strong interest in full-stack development and interaction design. I enjoy building modern web applications that are both technically solid and thoughtfully designed.",
+    "I'm a final year Computer Science (Honours) student at UTS with a strong interest in full-stack development and interaction design. I enjoy building modern web applications that are both technically solid and thoughtfully designed.",
     "My recent work includes React + TypeScript applications, ASP.NET Core backends and deployments on Azure with CI/CD pipelines. I focus on clean, maintainable code and interfaces that feel intuitive with a particular interest in roles where engineering and design intersect.",
   ],
 
@@ -18,17 +20,17 @@ export const PROFILE = {
     {
       shape: "circle" as const,
       title: "Frontend Development",
-      description: "React, TypeScript, JavaScript, Tailwind CSS — building fast, accessible and visually polished user interfaces.",
+      description: "React, TypeScript, JavaScript, Tailwind CSS - building fast, accessible and visually polished user interfaces.",
     },
     {
       shape: "square" as const,
       title: "Backend & Cloud",
-      description: "Node.js, C#, SQL, Azure — designing scalable APIs and deploying production applications with CI/CD pipelines.",
+      description: "Node.js, C#, SQL, Azure - designing scalable APIs and deploying production applications with CI/CD pipelines.",
     },
     {
       shape: "triangle" as const,
       title: "UI/UX Design",
-      description: "Figma, Canva, Interaction Design — crafting user centred experiences grounded in UTS's Interaction Design curriculum.",
+      description: "Figma, Canva, Interaction Design - crafting user centred experiences grounded in UTS's Interaction Design curriculum.",
     },
   ],
 
@@ -38,7 +40,7 @@ export const PROFILE = {
       tag: "Capstone Project",
       description:
         "Student-focused web platform with onboarding flows and interactive modules. Built with React + Tailwind and a focus on user-centred design.",
-      tech: ["React", "TailwindCSS", "Javascript", "Microsoft Azure", "PostgreSQL", "Python"],
+      tech: ["React", "TailwindCSS", "Javascript", "Microsoft Azure", "PostgreSQL", "CI/CD", "Python"],
       links: { link: "https://github.com/d4n1elliu/EduMap" },
     },
     {
@@ -46,7 +48,7 @@ export const PROFILE = {
       tag: "Personal Project",
       description:
         "A fun interactive bubble-popping game built as a personal project to explore game mechanics and DOM interactions.",
-      tech: ["HTML/CSS", "JavaScript"],
+      tech: ["Swift", "SwiftUI", "SpriteKit", "SwiftData"],
       links: { link: "https://github.com/d4n1elliu/Bubble-Pop" },
       comingSoon: false as const,
     },
@@ -54,8 +56,8 @@ export const PROFILE = {
       title: "Soleri",
       tag: "Personal Project",
       description:
-        "Personal Spotify analytics dashboard with listening heatmaps, discovery rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. Built with React 19, TypeScript and Tailwind CSS, deployed on Vercel with OAuth handled via Vercel Serverless Functions.",
-      tech: ["React", "TypeScript", "TailwindCSS", "Node.js", "Vercel"],
+        "Personal Spotify analytics dashboard powered by the Spotify API, featuring listening heatmaps, discovery rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. Built with React 19, TypeScript and Tailwind CSS, deployed on Vercel with Spotify OAuth handled via Vercel Serverless Functions.",
+      tech: ["React", "TypeScript", "TailwindCSS", "Spotify API", "Node.js", "Vercel"],
       links: { link: "https://github.com/d4n1elliu/Soleri" },
       comingSoon: false as const,
     },
@@ -64,7 +66,7 @@ export const PROFILE = {
       tag: "Group Project",
       description:
         "Cryptocurrency wallet iOS app built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins. Features secure authentication, QR code based transfers, transaction tracking and responsive mobile UI. Collaborated with a team through GitHub for version control.",
-      tech: ["Swift", "SwiftUI", "ASP.NET Core", "GitHub"],
+      tech: ["Swift", "SwiftUI", ".NET", "PostgreSQL", "Docker", "CI/CD", "CodeScanner"],
       links: { link: "https://github.com/sunwoo101/MemeSOL" },
       comingSoon: false as const,
     },
@@ -74,7 +76,7 @@ export const PROFILE = {
     {
       role: "Software Developer (Self Taught)",
       org: "Independent Development",
-      time: "Feb 2022 — Present",
+      time: "Feb 2022 - Present",
       points: [
         "Built and iterated on personal and university projects with a focus on clean UX.",
         "Developed reusable UI components and improved responsiveness and accessibility.",
@@ -85,13 +87,13 @@ export const PROFILE = {
   education: [
     {
       org: "University of Technology Sydney (UTS)",
-      details: "Bachelor of Computing Science (Honours) — Interaction Design (UI/UX)",
-      time: "Feb 2023 — Dec 2026",
+      details: "Bachelor of Computing Science (Honours) - Interaction Design (UI/UX)",
+      time: "Feb 2023 - Dec 2026",
     },
     {
       org: "UTS College",
       details: "Diploma of Information Technology",
-      time: "Mar 2022 — Dec 2022",
+      time: "Mar 2022 - Dec 2022",
     },
   ],
 } as const;

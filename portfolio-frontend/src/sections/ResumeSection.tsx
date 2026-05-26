@@ -12,7 +12,7 @@ export function Resume() {
       />
       <div className="w-full overflow-hidden border border-zinc-200" style={{ height: "80vh" }}>
         <iframe
-          src={`${PROFILE.links.resume}#view=FitH`}
+          src={PROFILE.links.resume}
           title="Daniel Liu Resume"
           className="h-full w-full"
           style={{ border: "none" }}

@@ -30,11 +30,15 @@ const FALLBACK_GRADIENT = "linear-gradient(135deg, #aaaaaa 0%, #666666 100%)";
 export function ProjectCard({
   title,
   tag,
+  description,
+  tech,
   link,
   comingSoon = false,
 }: {
   title: string;
   tag: string;
+  description?: string;
+  tech?: string[];
   link: string;
   comingSoon?: boolean;
 }) {
@@ -70,7 +74,31 @@ export function ProjectCard({
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+      {/* hover overlay with description + tech */}
+      {(description || (tech && tech.length > 0)) && !comingSoon && (
+        <div className="absolute inset-0 flex flex-col justify-end bg-black/80 p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          {description && (
+            <p className="mb-4 text-sm leading-relaxed text-white/80 line-clamp-4">{description}</p>
+          )}
+          {tech && tech.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {tech.map((t) => (
+                <span
+                  key={t}
+                  className="border border-white/30 px-2 py-0.5 text-xs text-white/60"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
+          <span className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
+            View on GitHub →
+          </span>
+        </div>
+      )}
 
       {comingSoon && (
         <div className="absolute inset-0 flex items-center justify-center">
@@ -80,7 +108,7 @@ export function ProjectCard({
         </div>
       )}
 
-      <div className="absolute bottom-0 left-0 p-8">
+      <div className="absolute bottom-0 left-0 p-8 transition-opacity duration-300 group-hover:opacity-0">
         <span className="text-xs font-medium uppercase tracking-widest text-white/60">
           {tag}
         </span>
