@@ -10,6 +10,8 @@ export function Projects() {
             key={p.title}
             title={p.title}
             tag={p.tag}
+            description={p.description}
+            tech={[...p.tech]}
             link={p.links.link}
             comingSoon={"comingSoon" in p ? p.comingSoon : false}
           />
