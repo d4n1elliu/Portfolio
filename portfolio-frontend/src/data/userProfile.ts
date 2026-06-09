@@ -58,7 +58,7 @@ export const PROFILE = {
       description:
         "Personal Spotify analytics dashboard powered by the Spotify API, featuring listening heatmaps, discovery rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. Built with React 19, TypeScript and Tailwind CSS, deployed on Vercel with Spotify OAuth handled via Vercel Serverless Functions.",
       tech: ["React", "TypeScript", "TailwindCSS", "Spotify API", "Node.js", "Vercel"],
-      links: { link: "https://github.com/d4n1elliu/Soleri" },
+      links: { link: "https://soleri.vercel.app/" },
       comingSoon: false as const,
     },
     {
@@ -67,7 +67,7 @@ export const PROFILE = {
       description:
         "Cryptocurrency wallet iOS app built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins. Features secure authentication, QR code based transfers, transaction tracking and responsive mobile UI. Collaborated with a team through GitHub for version control.",
       tech: ["Swift", "SwiftUI", ".NET", "PostgreSQL", "Docker", "CI/CD", "CodeScanner"],
-      links: { link: "https://github.com/sunwoo101/MemeSOL" },
+      links: { link: "https://memesol.daniel-liu.dev" },
       comingSoon: false as const,
     },
   ],
