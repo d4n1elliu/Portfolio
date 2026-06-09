@@ -33,8 +33,8 @@ Key Features:
 
 Repo: https://github.com/sunwoo101/MemeSOL
 
-### SOLERI
-A personal Spotify analytics dashboard that turns your listening history into clear, visual insights. Deployed on Vercel.
+### Soleri
+A Spotify analytics dashboard that turns your listening history into clear, visual insights. Deployed on Vercel.
 
 Tech Stack: React 19, TypeScript, Tailwind CSS v4, Recharts, Vercel Serverless Functions, Spotify Web API
 
