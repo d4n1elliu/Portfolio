@@ -18,7 +18,7 @@ const projectAssets: Record<string, { image?: string; gradient: string; contain?
     bgColor: "#111111",
   },
   MemeSOL: {
-    image: "/images/memesol.png",
+    image: "/images/memesol.svg",
     gradient: "linear-gradient(135deg, #f5c518 0%, #c47d00 50%, #7a4500 100%)",
     contain: true,
     bgColor: "#050505",
