@@ -31,7 +31,7 @@ Key Features:
 - Full transaction history with status indicators
 - First-launch onboarding flow
 
-Repo: https://github.com/sunwoo101/MemeSOL
+Repo: https://memesol.daniel-liu.dev/
 
 ### Soleri
 A Spotify analytics dashboard that turns your listening history into clear, visual insights. Deployed on Vercel.
