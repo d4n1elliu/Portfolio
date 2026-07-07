@@ -15,8 +15,8 @@ export const PROFILE = {
   avatar: "/images/profile.jpg",
 
   about: [
-    "I'm a final-year Computer Science (Honours) student at UTS with a strong interest in full-stack development and interaction design. I enjoy building modern web applications that are both technically solid and thoughtfully designed.",
-    "My recent work spans React + TypeScript front-ends, ASP.NET Core back-ends and deployments on Azure with CI/CD pipelines. I care about clean, maintainable code and interfaces that feel intuitive — I'm especially drawn to roles where engineering and design intersect.",
+    "I'm a final-year Computer Science (Honours) student at UTS with a strong interest in building modern web applications that are both technically solid and thoughtfully designed.",
+    "My recent work spans React and TypeScript front-ends, ASP.NET Core back-ends and Azure deployments.",
   ],
 
   // Quick-scan panel shown in the About section (works with or without a photo).
@@ -24,7 +24,7 @@ export const PROFILE = {
     { label: "Based in", value: "Sydney, Australia" },
     { label: "Focus", value: "Full-stack web & interaction design" },
     { label: "Core stack", value: "React · TypeScript · .NET · Azure" },
-    { label: "Education", value: "BCompSci (Hons), UTS — 2026" },
+    { label: "Education", value: "BCompSci (Hons), UTS, 2026" },
     { label: "Status", value: "Open to grad roles & internships" },
   ],
 
@@ -58,7 +58,7 @@ export const PROFILE = {
       tag: "Personal Project",
       year: "2025 – 2026",
       description:
-        "A personal Spotify analytics dashboard powered by the Spotify API — listening heatmaps, discovery-rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. OAuth handled via Vercel serverless functions.",
+        "A personal Spotify analytics dashboard powered by the Spotify API, with listening heatmaps, discovery-rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. OAuth is handled via Vercel serverless functions.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Spotify API", "Node.js", "Vercel"],
       links: { website: "https://soleri.vercel.app/" },
       featured: true as const,
@@ -69,7 +69,7 @@ export const PROFILE = {
       tag: "Capstone Project",
       year: "2025",
       description:
-        "A high-fidelity web platform helping incoming university students transition into degree life — a course-matching questionnaire, an events & networking map and a buddy program. React + Tailwind front-end with an ASP.NET Core API on Azure.",
+        "A high-fidelity web platform helping incoming university students transition into degree life, with a course-matching questionnaire, an events and networking map and a buddy program. Built with a React and Tailwind front-end and an ASP.NET Core API on Azure.",
       tech: ["React", "Tailwind CSS", "ASP.NET Core", "PostgreSQL", "Azure", "CI/CD"],
       links: {
         github: "https://github.com/d4n1elliu/EduMap",
@@ -83,7 +83,7 @@ export const PROFILE = {
       tag: "Group Project",
       year: "2026",
       description:
-        "A full-stack iOS cryptocurrency wallet built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins — secure auth, QR-code transfers and transaction tracking, built collaboratively via Git.",
+        "A full-stack iOS cryptocurrency wallet built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins, with secure auth, QR-code transfers and transaction tracking, built collaboratively via Git.",
       tech: ["Swift", "SwiftUI", ".NET", "PostgreSQL", "Docker", "CI/CD"],
       links: {
         website: "https://memesol.daniel-liu.dev",
@@ -96,7 +96,7 @@ export const PROFILE = {
       tag: "Personal Project",
       year: "2026",
       description:
-        "A casual iOS mini-game in Swift — SwiftUI navigation with SpriteKit physics, a colour-weighted scoring system, combo multipliers and a persistent SwiftData leaderboard that scales across iPhone and iPad.",
+        "A casual iOS mini-game in Swift, using SwiftUI navigation with SpriteKit physics, a colour-weighted scoring system, combo multipliers and a persistent SwiftData leaderboard that scales across iPhone and iPad.",
       tech: ["Swift", "SwiftUI", "SpriteKit", "SwiftData"],
       links: {
         github: "https://github.com/d4n1elliu/Bubble-Pop",
@@ -139,8 +139,10 @@ export const PROFILE = {
       event: "UTS TechFest 2026 · Software Category",
       date: "2026",
       team: "With Sun Kim, Gurpreet Kaur & Ineshka De Mel",
-      description:
-        "Selected to present MemeSOL — a full-stack iOS crypto wallet that lets anyone create custom meme coins with no coding — in the Software category at UTS TechFest 2026, powered by the UTS Faculty of Engineering & IT. Demoed the app live to industry guests, academics and fellow students.",
+      description: [
+        "Selected to present MemeSOL, a full-stack iOS crypto wallet that lets anyone create custom meme coins with no coding, in the Software category at UTS TechFest 2026, powered by the UTS Faculty of Engineering and IT.",
+        "Demoed the app live to industry guests, academics and fellow students.",
+      ],
       tags: ["MemeSOL", "UTS TechFest", "Software Category", "SwiftUI", "ASP.NET"],
       images: [
         { src: "/images/awards/banner.jpeg", caption: "UTS TechFest 2026, powered by the Faculty of Engineering & IT" },

@@ -62,9 +62,13 @@ export function Awards() {
                 {"team" in award && award.team && (
                   <p className="mt-2 text-sm text-zinc-500">{award.team}</p>
                 )}
-                <p className="mt-4 text-base leading-relaxed text-zinc-600">
-                  {award.description}
-                </p>
+                <div className="mt-4 space-y-3">
+                  {award.description.map((para) => (
+                    <p key={para} className="text-base leading-relaxed text-zinc-600">
+                      {para}
+                    </p>
+                  ))}
+                </div>
                 {award.tags && award.tags.length > 0 && (
                   <div className="mt-6 flex flex-wrap gap-2">
                     {award.tags.map((t) => (
