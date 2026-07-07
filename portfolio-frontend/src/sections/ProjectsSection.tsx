@@ -9,7 +9,7 @@ export function Projects() {
       <SectionHeader
         eyebrow="Selected work"
         title="Projects"
-        description="A selection of full-stack and mobile projects — the tech, the problem and a link to each."
+        description="Visit the live site, browse the code, or watch a demo where available."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {PROFILE.projects.map((p, i) => (
@@ -20,7 +20,9 @@ export function Projects() {
               year={"year" in p ? p.year : undefined}
               description={p.description}
               tech={[...p.tech]}
-              link={p.links.link}
+              website={"website" in p.links ? p.links.website : undefined}
+              github={"github" in p.links ? p.links.github : undefined}
+              demo={"demo" in p.links ? p.links.demo : undefined}
               comingSoon={"comingSoon" in p ? p.comingSoon : false}
             />
           </Reveal>

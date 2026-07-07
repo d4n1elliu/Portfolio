@@ -60,7 +60,7 @@ export const PROFILE = {
       description:
         "A personal Spotify analytics dashboard powered by the Spotify API — listening heatmaps, discovery-rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. OAuth handled via Vercel serverless functions.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Spotify API", "Node.js", "Vercel"],
-      links: { link: "https://soleri.vercel.app/" },
+      links: { website: "https://soleri.vercel.app/" },
       featured: true as const,
       comingSoon: false as const,
     },
@@ -71,7 +71,10 @@ export const PROFILE = {
       description:
         "A high-fidelity web platform helping incoming university students transition into degree life — a course-matching questionnaire, an events & networking map and a buddy program. React + Tailwind front-end with an ASP.NET Core API on Azure.",
       tech: ["React", "Tailwind CSS", "ASP.NET Core", "PostgreSQL", "Azure", "CI/CD"],
-      links: { link: "https://github.com/d4n1elliu/EduMap" },
+      links: {
+        github: "https://github.com/d4n1elliu/EduMap",
+        demo: "https://www.youtube.com/watch?v=wZ4FTTmbc1Q",
+      },
       featured: true as const,
       comingSoon: false as const,
     },
@@ -82,7 +85,10 @@ export const PROFILE = {
       description:
         "A full-stack iOS cryptocurrency wallet built with SwiftUI and ASP.NET Core that lets users create and manage custom meme coins — secure auth, QR-code transfers and transaction tracking, built collaboratively via Git.",
       tech: ["Swift", "SwiftUI", ".NET", "PostgreSQL", "Docker", "CI/CD"],
-      links: { link: "https://memesol.daniel-liu.dev" },
+      links: {
+        website: "https://memesol.daniel-liu.dev",
+        demo: "https://youtu.be/1JZuNkn7EKY",
+      },
       comingSoon: false as const,
     },
     {
@@ -92,7 +98,10 @@ export const PROFILE = {
       description:
         "A casual iOS mini-game in Swift — SwiftUI navigation with SpriteKit physics, a colour-weighted scoring system, combo multipliers and a persistent SwiftData leaderboard that scales across iPhone and iPad.",
       tech: ["Swift", "SwiftUI", "SpriteKit", "SwiftData"],
-      links: { link: "https://github.com/d4n1elliu/Bubble-Pop" },
+      links: {
+        github: "https://github.com/d4n1elliu/Bubble-Pop",
+        demo: "https://youtu.be/Rp7rezuPVnk",
+      },
       comingSoon: false as const,
     },
   ],
