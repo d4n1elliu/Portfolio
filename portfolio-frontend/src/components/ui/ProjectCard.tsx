@@ -64,6 +64,12 @@ const PlayIcon = () => (
   </svg>
 );
 
+const CloseIcon = () => (
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+    <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+  </svg>
+);
+
 const BTN_BASE =
   "inline-flex items-center gap-2 px-4 py-2.5 text-xs font-medium uppercase tracking-[0.12em] transition-colors";
 
@@ -108,9 +114,21 @@ export function ProjectCard({
 
   return (
     <div className="group flex h-full flex-col border border-zinc-200/80 bg-[#fbfaf6] transition-all duration-300 hover:border-zinc-900/20 hover:shadow-[0_18px_40px_-24px_rgba(0,0,0,0.35)]">
-      {/* image banner */}
-      <div className="relative h-52 overflow-hidden" style={{ backgroundColor: asset.bgColor ?? "#111" }}>
-        {asset.image ? (
+      {/* banner — plays the demo inline (in place) when opened */}
+      <div
+        className={`relative overflow-hidden ${open && videoId ? "aspect-video" : "h-52"}`}
+        style={{ backgroundColor: asset.bgColor ?? "#111" }}
+      >
+        {open && videoId ? (
+          <iframe
+            src={embedSrc(videoId)}
+            title={`${title} demo video`}
+            className="absolute inset-0 h-full w-full"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        ) : asset.image ? (
           <img
             src={asset.image}
             alt={`${title} preview`}
@@ -125,7 +143,7 @@ export function ProjectCard({
           />
         )}
 
-        {comingSoon && (
+        {comingSoon && !open && (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="border border-white/30 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white/70">
               In Progress
@@ -183,11 +201,15 @@ export function ProjectCard({
           {demo ? (
             <button
               type="button"
-              onClick={openDemo}
-              className={`${BTN_BASE} border border-zinc-300 text-zinc-800 hover:border-zinc-900 hover:bg-zinc-100`}
+              onClick={() => (open ? setOpen(false) : openDemo())}
+              className={`${BTN_BASE} border ${
+                open
+                  ? "border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-700"
+                  : "border-zinc-300 text-zinc-800 hover:border-zinc-900 hover:bg-zinc-100"
+              }`}
             >
-              <PlayIcon />
-              Watch demo
+              {open ? <CloseIcon /> : <PlayIcon />}
+              {open ? "Close demo" : "Watch demo"}
             </button>
           ) : (
             <span
@@ -214,51 +236,6 @@ export function ProjectCard({
           )}
         </div>
       </div>
-
-      {/* demo video lightbox — page stays scrollable behind it */}
-      {open && videoId && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${title} demo video`}
-          onClick={() => setOpen(false)}
-        >
-          <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <div className="absolute -top-11 right-0 flex items-center gap-5">
-              <a
-                href={demo}
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm text-white/70 transition-colors hover:text-white"
-              >
-                Open on YouTube ↗
-              </a>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                aria-label="Close video"
-                className="flex items-center gap-1.5 text-sm text-white/80 transition-colors hover:text-white"
-              >
-                Close
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-                </svg>
-              </button>
-            </div>
-            <div className="aspect-video w-full overflow-hidden bg-black shadow-2xl">
-              <iframe
-                src={embedSrc(videoId)}
-                title={`${title} demo video`}
-                className="h-full w-full"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
