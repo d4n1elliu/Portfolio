@@ -5,6 +5,7 @@ import { About } from "./sections/AboutSection";
 import { Projects } from "./sections/ProjectsSection";
 import { Skills } from "./sections/SkillsSection";
 import { Experience } from "./sections/ExperienceSection";
+import { Awards } from "./sections/AwardsSection";
 import { Education } from "./sections/EducationSection";
 import { Contact } from "./sections/ContactSection";
 import { Resume } from "./sections/ResumeSection";
@@ -19,6 +20,7 @@ export default function App() {
         <About />
         <Skills />
         <Experience />
+        <Awards />
         <Education />
         <Resume />
         <Contact />

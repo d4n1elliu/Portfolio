@@ -30,16 +30,30 @@ export function FeatureItem({
   shape,
   title,
   description,
+  items,
 }: {
   shape: ShapeType;
   title: string;
   description: string;
+  items?: readonly string[];
 }) {
   return (
-    <div>
+    <div className="flex h-full flex-col">
       <Icon type={shape} />
-      <h3 className="mt-8 text-xl font-normal text-zinc-900">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-zinc-500">{description}</p>
+      <h3 className="mt-7 text-xl font-medium text-zinc-900">{title}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-zinc-600">{description}</p>
+      {items && items.length > 0 && (
+        <ul className="mt-5 flex flex-wrap gap-2">
+          {items.map((it) => (
+            <li
+              key={it}
+              className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-700"
+            >
+              {it}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
