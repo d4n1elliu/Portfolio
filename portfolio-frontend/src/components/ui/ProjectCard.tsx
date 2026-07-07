@@ -1,35 +1,32 @@
-const projectAssets: Record<string, { image?: string; gradient: string; contain?: boolean; bgColor?: string }> = {
+const projectAssets: Record<string, { image?: string; gradient: string; bgColor?: string }> = {
   EduMap: {
     image: "/images/edumap.png",
     gradient: "linear-gradient(135deg, #c8b8e8 0%, #f0d080 60%, #e8c870 100%)",
-    contain: true,
     bgColor: "#1a1008",
   },
   "Bubble Pop": {
     image: "/images/bubblepop.png",
     gradient: "linear-gradient(135deg, #a8c8f0 0%, #78a8e0 50%, #5890d0 100%)",
-    contain: true,
     bgColor: "#0d1520",
   },
   Soleri: {
     image: "/images/soleri.png",
     gradient: "linear-gradient(135deg, #1db954 0%, #158a3e 50%, #0d5c2a 100%)",
-    contain: true,
     bgColor: "#111111",
   },
   MemeSOL: {
     image: "/images/memesol.svg",
     gradient: "linear-gradient(135deg, #f5c518 0%, #c47d00 50%, #7a4500 100%)",
-    contain: true,
     bgColor: "#050505",
   },
 };
 
-const FALLBACK_GRADIENT = "linear-gradient(135deg, #aaaaaa 0%, #666666 100%)";
+const FALLBACK = { gradient: "linear-gradient(135deg, #aaaaaa 0%, #666666 100%)", bgColor: "#222" };
 
 export function ProjectCard({
   title,
   tag,
+  year,
   description,
   tech,
   link,
@@ -37,82 +34,83 @@ export function ProjectCard({
 }: {
   title: string;
   tag: string;
+  year?: string;
   description?: string;
   tech?: string[];
   link: string;
   comingSoon?: boolean;
 }) {
-  const asset = projectAssets[title] ?? { gradient: FALLBACK_GRADIENT };
+  const asset = projectAssets[title] ?? FALLBACK;
   const Wrapper = comingSoon ? "div" : "a";
-  const wrapperProps = comingSoon
-    ? {}
-    : { href: link, target: "_blank", rel: "noreferrer" };
+  const wrapperProps = comingSoon ? {} : { href: link, target: "_blank", rel: "noreferrer" };
 
   return (
     <Wrapper
       {...(wrapperProps as object)}
-      className="group relative block overflow-hidden"
-      style={{ height: "380px" }}
+      className="group flex h-full flex-col border border-zinc-200/80 bg-[#fbfaf6] transition-all duration-300 hover:border-zinc-900/20 hover:shadow-[0_18px_40px_-24px_rgba(0,0,0,0.35)]"
     >
-      {asset.contain && (
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: asset.bgColor ?? "#111111" }}
-        />
-      )}
-      {asset.image ? (
-        <img
-          src={asset.image}
-          alt={title}
-          className={`absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105 ${asset.contain ? "object-contain p-10" : "object-cover"}`}
-          style={{ filter: "grayscale(60%) brightness(55%) contrast(1.1)" }}
-        />
-      ) : (
-        <div
-          className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
-          style={{ background: asset.gradient, filter: comingSoon ? "brightness(40%)" : "brightness(70%)" }}
-        />
-      )}
+      {/* image banner */}
+      <div
+        className="relative h-52 overflow-hidden"
+        style={{ backgroundColor: asset.bgColor ?? "#111" }}
+      >
+        {asset.image ? (
+          <img
+            src={asset.image}
+            alt={`${title} preview`}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-contain p-10 transition-transform duration-500 group-hover:scale-105"
+            style={{ filter: comingSoon ? "grayscale(100%) brightness(45%)" : "none" }}
+          />
+        ) : (
+          <div
+            className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
+            style={{ background: asset.gradient }}
+          />
+        )}
+        {comingSoon && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="border border-white/30 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white/70">
+              In Progress
+            </span>
+          </div>
+        )}
+      </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-
-      {/* hover overlay with description + tech */}
-      {(description || (tech && tech.length > 0)) && !comingSoon && (
-        <div className="absolute inset-0 flex flex-col justify-end bg-black/80 p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          {description && (
-            <p className="mb-4 text-sm leading-relaxed text-white/80 line-clamp-4">{description}</p>
-          )}
-          {tech && tech.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {tech.map((t) => (
-                <span
-                  key={t}
-                  className="border border-white/30 px-2 py-0.5 text-xs text-white/60"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          )}
-          <span className="mt-4 text-xs font-medium uppercase tracking-widest text-white/40">
-            View on GitHub →
+      {/* body */}
+      <div className="flex flex-1 flex-col p-7">
+        <div className="flex items-center justify-between gap-3">
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">
+            {tag}
           </span>
+          {year && <span className="text-xs text-zinc-400">{year}</span>}
         </div>
-      )}
 
-      {comingSoon && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="border border-white/30 px-4 py-2 text-xs font-medium uppercase tracking-widest text-white/60">
-            In Progress
+        <h3 className="mt-2 text-2xl font-medium text-zinc-900">{title}</h3>
+
+        {description && (
+          <p className="mt-3 text-sm leading-relaxed text-zinc-600">{description}</p>
+        )}
+
+        {tech && tech.length > 0 && (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tech.map((t) => (
+              <span
+                key={t}
+                className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-600"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {!comingSoon && (
+          <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.16em] text-zinc-500 transition-colors group-hover:text-zinc-900">
+            View project
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </span>
-        </div>
-      )}
-
-      <div className="absolute bottom-0 left-0 p-8 transition-opacity duration-300 group-hover:opacity-0">
-        <span className="text-xs font-medium uppercase tracking-widest text-white/60">
-          {tag}
-        </span>
-        <h3 className="mt-1 text-2xl font-light text-white">{title}</h3>
+        )}
       </div>
     </Wrapper>
   );

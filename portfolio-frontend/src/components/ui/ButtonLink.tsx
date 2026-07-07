@@ -6,15 +6,19 @@ export function ButtonLink({
   variant = "primary",
   className,
   download,
+  newTab,
 }: {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
   download?: boolean;
+  newTab?: boolean;
 }) {
   const isExternal = href.startsWith("http") || href.startsWith("//");
-  const base = "inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors focus:outline-none";
+  const openInNewTab = newTab || isExternal;
+  const base =
+    "inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2";
   const styles =
     variant === "primary"
       ? "bg-zinc-900 text-white hover:bg-zinc-700"
@@ -23,7 +27,7 @@ export function ButtonLink({
     <a
       className={classNames(base, styles, className ?? "")}
       href={href}
-      {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
+      {...(openInNewTab ? { target: "_blank", rel: "noreferrer" } : {})}
       {...(download ? { download: true } : {})}
     >
       {children}
