@@ -25,13 +25,24 @@ const projectAssets: Record<string, { image?: string; gradient: string; bgColor?
 
 const FALLBACK = { gradient: "linear-gradient(135deg, #aaaaaa 0%, #666666 100%)", bgColor: "#222" };
 
-/** Turn any YouTube watch/short URL into an embeddable URL. */
-function toEmbedUrl(url: string): string | null {
+/** Extract the video id from any YouTube watch / short / embed URL. */
+function youTubeId(url: string): string | null {
   const watch = url.match(/[?&]v=([\w-]+)/);
   const short = url.match(/youtu\.be\/([\w-]+)/);
   const embed = url.match(/youtube\.com\/embed\/([\w-]+)/);
-  const id = watch?.[1] ?? short?.[1] ?? embed?.[1];
-  return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : null;
+  return watch?.[1] ?? short?.[1] ?? embed?.[1] ?? null;
+}
+
+/**
+ * Build the embed src. Passing an explicit `origin` avoids YouTube's
+ * "Error 153 – Video player configuration error" that occurs when the
+ * embedding origin can't be resolved.
+ */
+function embedSrc(id: string): string {
+  const origin = typeof window !== "undefined" ? window.location.origin : "";
+  const params = new URLSearchParams({ rel: "0", autoplay: "1", playsinline: "1" });
+  if (origin) params.set("origin", origin);
+  return `https://www.youtube.com/embed/${id}?${params.toString()}`;
 }
 
 const GithubIcon = ({ size = 16 }: { size?: number }) => (
@@ -78,23 +89,20 @@ export function ProjectCard({
   comingSoon?: boolean;
 }) {
   const asset = projectAssets[title] ?? FALLBACK;
-  const embedUrl = demo ? toEmbedUrl(demo) : null;
+  const videoId = demo ? youTubeId(demo) : null;
   const [open, setOpen] = useState(false);
 
+  // Close on Escape. We intentionally do NOT lock body scroll so the page
+  // stays scrollable while the demo is open.
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
-    };
+    return () => document.removeEventListener("keydown", onKey);
   }, [open]);
 
   const openDemo = () => {
-    if (embedUrl) setOpen(true);
+    if (videoId) setOpen(true);
     else if (demo) window.open(demo, "_blank", "noreferrer");
   };
 
@@ -115,20 +123,6 @@ export function ProjectCard({
             className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
             style={{ background: asset.gradient }}
           />
-        )}
-
-        {/* play overlay for cards with a demo video */}
-        {demo && !comingSoon && (
-          <button
-            type="button"
-            onClick={openDemo}
-            aria-label={`Watch ${title} demo video`}
-            className="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors hover:bg-black/40"
-          >
-            <span className="flex h-16 w-16 items-center justify-center rounded-full border border-white/70 bg-black/30 text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
-              <span className="ml-0.5"><PlayIcon /></span>
-            </span>
-          </button>
         )}
 
         {comingSoon && (
@@ -221,8 +215,8 @@ export function ProjectCard({
         </div>
       </div>
 
-      {/* demo video lightbox */}
-      {open && embedUrl && (
+      {/* demo video lightbox — page stays scrollable behind it */}
+      {open && videoId && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm"
           role="dialog"
@@ -231,23 +225,34 @@ export function ProjectCard({
           onClick={() => setOpen(false)}
         >
           <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              aria-label="Close video"
-              className="absolute -top-11 right-0 flex items-center gap-1.5 text-sm text-white/80 transition-colors hover:text-white"
-            >
-              Close
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-              </svg>
-            </button>
+            <div className="absolute -top-11 right-0 flex items-center gap-5">
+              <a
+                href={demo}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-white/70 transition-colors hover:text-white"
+              >
+                Open on YouTube ↗
+              </a>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                aria-label="Close video"
+                className="flex items-center gap-1.5 text-sm text-white/80 transition-colors hover:text-white"
+              >
+                Close
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+                </svg>
+              </button>
+            </div>
             <div className="aspect-video w-full overflow-hidden bg-black shadow-2xl">
               <iframe
-                src={embedUrl}
+                src={embedSrc(videoId)}
                 title={`${title} demo video`}
                 className="h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
