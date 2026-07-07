@@ -27,10 +27,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Editorial serif — used for large display headings */
+/* Editorial serif — used for large display headings.
+   DM Serif Display pairs natively with the DM Sans body font. */
 .font-display {
-  font-family: 'Fraunces', 'Times New Roman', serif;
-  font-optical-sizing: auto;
+  font-family: 'DM Serif Display', 'Georgia', 'Times New Roman', serif;
+  font-weight: 400;
 }
 
 /* Scroll-reveal animation */
