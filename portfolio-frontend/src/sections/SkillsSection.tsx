@@ -7,11 +7,7 @@ import { PROFILE } from "../data/userProfile";
 export function Skills() {
   return (
     <Section id="skills">
-      <SectionHeader
-        eyebrow="What I work with"
-        title="Skills"
-        description="Comfortable across the stack, from React front-ends to .NET APIs and cloud deployment."
-      />
+      <SectionHeader eyebrow="What I work with" title="Skills" />
       <div className="grid gap-x-12 gap-y-14 md:grid-cols-3">
         {PROFILE.skills.map((s, i) => (
           <Reveal key={s.title} delay={i * 90}>

@@ -60,7 +60,10 @@ export const PROFILE = {
       description:
         "A personal Spotify analytics dashboard powered by the Spotify API, with listening heatmaps, discovery-rate charts, marathon tracking, artist obsession phases and a Billboard Hot 100 comparison. OAuth is handled via Vercel serverless functions.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Spotify API", "Node.js", "Vercel"],
-      links: { website: "https://soleri.vercel.app/" },
+      links: {
+        website: "https://soleri.vercel.app/",
+        github: "https://github.com/d4n1elliu/Soleri",
+      },
       featured: true as const,
       comingSoon: false as const,
     },
@@ -88,6 +91,7 @@ export const PROFILE = {
       links: {
         website: "https://memesol.daniel-liu.dev",
         demo: "https://youtu.be/1JZuNkn7EKY",
+        github: "https://github.com/sunwoo101/MemeSOL",
       },
       comingSoon: false as const,
     },
