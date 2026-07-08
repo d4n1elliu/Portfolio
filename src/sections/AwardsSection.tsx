@@ -37,13 +37,22 @@ function AwardGallery({
 }) {
   // Duplicate the set so the -50% loop is seamless. Slower for fewer images.
   const duration = Math.max(images.length * 8, 24);
+  const [paused, setPaused] = useState(false);
 
   return (
     <div
       className="marquee py-1"
       style={{ ["--marquee-duration" as string]: `${duration}s` }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
     >
-      <ul className="marquee__track m-0 list-none p-0">
+      {/* Pause is driven from JS state, not a CSS :hover rule — Chromium
+          doesn't reliably honour animation-play-state changes made via a
+          hover pseudo-class on a compositor-accelerated transform. */}
+      <ul
+        className="marquee__track m-0 list-none p-0"
+        style={paused ? { animationPlayState: "paused" } : undefined}
+      >
         {[...images, ...images].map((img, i) => (
           <li
             key={`${img.src}-${i}`}

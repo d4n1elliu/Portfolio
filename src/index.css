@@ -74,7 +74,7 @@ body {
   animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
 }
 
-.marquee:hover .marquee__track,
+/* Hover pause is handled in JS (see AwardGallery); keep keyboard focus here. */
 .marquee:focus-within .marquee__track {
   animation-play-state: paused;
 }
