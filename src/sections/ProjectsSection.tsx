@@ -1,11 +1,12 @@
 import { PROFILE } from "../data/userProfile";
 import { ProjectCard } from "../components/ui/ProjectCard";
+import { Section } from "../components/ui/Section";
 import { SectionHeader } from "../components/ui/SectionHeader";
 import { Reveal } from "../components/ui/Reveal";
 
 export function Projects() {
   return (
-    <section id="projects" style={{ scrollMarginTop: "5rem" }} className="px-8 pb-20 pt-6 md:px-16">
+    <Section id="projects" alt>
       <SectionHeader
         title="Projects"
         description="Visit the live site, browse the code, or watch a demo where available."
@@ -27,6 +28,6 @@ export function Projects() {
           </Reveal>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

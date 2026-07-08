@@ -16,9 +16,6 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <div className="px-8 py-4 md:px-16">
-          <hr className="border-t border-zinc-300" />
-        </div>
         <Projects />
         <About />
         <Skills />
