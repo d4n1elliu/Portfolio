@@ -8,7 +8,7 @@ function AwardImage({ src, caption }: { src: string; caption?: string }) {
   const [ok, setOk] = useState(true);
 
   return (
-    <figure className="flex h-full w-[300px] shrink-0 flex-col overflow-hidden border border-zinc-300/60 bg-[#faf7f0] sm:w-[360px]">
+    <figure className="w-[340px] shrink-0 overflow-hidden border border-zinc-300/60 bg-[#faf7f0] sm:w-[460px] lg:w-[560px]">
       {ok ? (
         <img
           src={src}
@@ -25,11 +25,6 @@ function AwardImage({ src, caption }: { src: string; caption?: string }) {
           </svg>
           <span className="px-4 text-center text-xs font-medium uppercase tracking-[0.14em]">Add photo</span>
         </div>
-      )}
-      {caption && (
-        <figcaption className="px-4 py-3 text-xs leading-relaxed text-zinc-500">
-          {caption}
-        </figcaption>
       )}
     </figure>
   );

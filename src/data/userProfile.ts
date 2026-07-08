@@ -145,7 +145,6 @@ export const PROFILE = {
       team: "With Sun Kim, Gurpreet Kaur & Ineshka De Mel",
       description: [
         "Selected to present MemeSOL, a full-stack iOS crypto wallet that lets anyone create custom meme coins with no coding, in the Software category at UTS TechFest 2026, powered by the UTS Faculty of Engineering and IT.",
-        "Demoed the app live to industry guests, academics and fellow students.",
       ],
       tags: ["MemeSOL", "UTS TechFest", "Software Category", "SwiftUI", "ASP.NET"],
       images: [
