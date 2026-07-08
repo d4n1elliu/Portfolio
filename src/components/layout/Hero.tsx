@@ -2,7 +2,7 @@ import { PROFILE } from "../../data/userProfile";
 
 export function Hero() {
   return (
-    <section className="px-8 pb-14 pt-16 md:px-16 md:pb-20 md:pt-24">
+    <section className="px-8 py-16 md:px-16 md:py-24">
       {/* availability pill */}
       <div className="reveal is-visible flex items-center gap-2.5">
         <span className="relative flex h-2 w-2">

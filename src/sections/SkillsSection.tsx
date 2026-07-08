@@ -6,7 +6,7 @@ import { PROFILE } from "../data/userProfile";
 
 export function Skills() {
   return (
-    <Section id="skills">
+    <Section id="skills" alt>
       <SectionHeader title="Skills" />
       <div className="grid gap-x-12 gap-y-14 md:grid-cols-3">
         {PROFILE.skills.map((s, i) => (

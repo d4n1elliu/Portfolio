@@ -6,7 +6,7 @@ import { PROFILE } from "../data/userProfile";
 
 export function Education() {
   return (
-    <Section id="education" alt>
+    <Section id="education">
       <SectionHeader title="Education" />
       <div className="border-t border-zinc-200">
         {PROFILE.education.map((ed) => (

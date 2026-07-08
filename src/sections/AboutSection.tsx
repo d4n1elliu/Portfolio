@@ -10,7 +10,7 @@ export function About() {
   const hasPhoto = Boolean(PROFILE.avatar) && imgOk;
 
   return (
-    <Section id="about" alt>
+    <Section id="about">
       <SectionHeader title="About" />
       <div className="grid gap-12 md:grid-cols-5 md:gap-16">
         {/* text */}

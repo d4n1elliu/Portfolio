@@ -5,7 +5,7 @@ import { PROFILE } from "../data/userProfile";
 
 export function Contact() {
   return (
-    <Section id="contact" alt>
+    <Section id="contact">
       <Reveal>
         <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">
           Get in touch

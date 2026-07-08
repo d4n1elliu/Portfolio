@@ -61,7 +61,7 @@ function AwardGallery({
 
 export function Awards() {
   return (
-    <Section id="awards">
+    <Section id="awards" alt>
       <SectionHeader
         title="Honours & Awards"
         description="Moments where my work was recognised and put in front of an audience."
