@@ -7,7 +7,7 @@ import { PROFILE } from "../data/userProfile";
 export function Resume() {
   return (
     <Section id="resume">
-      <SectionHeader eyebrow="The one-pager" title="Résumé" />
+      <SectionHeader title="Résumé" />
       <Reveal>
         <div className="flex flex-col items-start justify-between gap-8 border border-zinc-200 bg-[#f0ebe0] p-8 md:flex-row md:items-center md:p-10">
           <div className="flex items-start gap-5">

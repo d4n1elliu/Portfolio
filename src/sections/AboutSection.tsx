@@ -11,7 +11,7 @@ export function About() {
 
   return (
     <Section id="about" alt>
-      <SectionHeader eyebrow="Who I am" title="About" />
+      <SectionHeader title="About" />
       <div className="grid gap-12 md:grid-cols-5 md:gap-16">
         {/* text */}
         <Reveal className="md:col-span-3">

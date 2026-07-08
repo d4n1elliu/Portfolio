@@ -7,7 +7,7 @@ import { PROFILE } from "../data/userProfile";
 export function Experience() {
   return (
     <Section id="experience" alt>
-      <SectionHeader eyebrow="Where I've been" title="Experience" />
+      <SectionHeader title="Experience" />
       <div className="border-t border-zinc-200">
         {PROFILE.experience.map((e) => (
           <Reveal key={`${e.role}-${e.org}`}>
