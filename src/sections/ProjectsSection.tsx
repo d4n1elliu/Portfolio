@@ -7,7 +7,6 @@ export function Projects() {
   return (
     <section id="projects" style={{ scrollMarginTop: "5rem" }} className="px-8 pb-20 pt-6 md:px-16">
       <SectionHeader
-        eyebrow="Selected work"
         title="Projects"
         description="Visit the live site, browse the code, or watch a demo where available."
       />

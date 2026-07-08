@@ -63,7 +63,6 @@ export function Awards() {
   return (
     <Section id="awards">
       <SectionHeader
-        eyebrow="Recognition"
         title="Honours & Awards"
         description="Moments where my work was recognised and put in front of an audience."
       />

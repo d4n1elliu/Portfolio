@@ -7,7 +7,7 @@ import { PROFILE } from "../data/userProfile";
 export function Education() {
   return (
     <Section id="education" alt>
-      <SectionHeader eyebrow="How I got here" title="Education" />
+      <SectionHeader title="Education" />
       <div className="border-t border-zinc-200">
         {PROFILE.education.map((ed) => (
           <Reveal key={ed.org}>
