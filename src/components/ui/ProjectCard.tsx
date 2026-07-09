@@ -168,7 +168,7 @@ export function ProjectCard({
         {tech && tech.length > 0 && (
           <div className="mt-5 flex flex-wrap gap-2">
             {tech.map((t) => (
-              <span key={t} className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-600">
+              <span key={t} className="rounded-sm border border-zinc-300 bg-white px-2.5 py-1 text-xs text-zinc-700">
                 {t}
               </span>
             ))}

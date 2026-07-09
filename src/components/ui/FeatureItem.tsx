@@ -47,7 +47,7 @@ export function FeatureItem({
           {items.map((it) => (
             <li
               key={it}
-              className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-700"
+              className="rounded-sm border border-zinc-300 bg-white px-2.5 py-1 text-xs text-zinc-700"
             >
               {it}
             </li>
