@@ -47,7 +47,7 @@ export const PROFILE = {
       shape: "triangle" as const,
       title: "UI/UX Design",
       description:
-        "Crafting user-centred experiences grounded in UTS's Interaction Design curriculum.",
+        "Designing intuitive, user-centred interfaces.",
       items: ["Figma", "Canva", "Interaction Design", "Prototyping"],
     },
   ],
