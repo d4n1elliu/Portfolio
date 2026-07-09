@@ -139,6 +139,18 @@ export const PROFILE = {
   // and reference them below — missing images fall back to a placeholder tile.
   awards: [
     {
+      title: "Named to the Dean's List 2026",
+      event: "UTS Faculty of Engineering & IT",
+      date: "2026",
+      description: [
+        "Recognised on the UTS Faculty of Engineering and IT Dean's List 2026 for outstanding academic achievement — a faculty initiative celebrating top-performing students across Engineering and Information Technology.",
+      ],
+      tags: ["Dean's List", "Academic Achievement", "UTS"],
+      images: [
+        { src: "/images/awards/deans-list-2026.jpeg", caption: "Dean's List 2026 certificate, UTS Faculty of Engineering & IT" },
+      ],
+    },
+    {
       title: "Selected to Showcase MemeSOL",
       event: "UTS TechFest 2026 · Software Category",
       date: "2026",
