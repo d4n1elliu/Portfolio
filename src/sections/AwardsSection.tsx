@@ -65,7 +65,7 @@ export function Awards() {
       <SectionHeader title="Honours & Awards" />
 
       <div className="flex flex-col gap-16">
-        {PROFILE.awards.map((award) => {
+        {PROFILE.awards.map((award, i) => {
           const isCertificate =
             "layout" in award && award.layout === "certificate";
 
@@ -94,7 +94,10 @@ export function Awards() {
           );
 
           return (
-            <Reveal key={award.title}>
+            <Reveal
+              key={award.title}
+              className={i > 0 ? "border-t border-zinc-200 pt-16" : ""}
+            >
               {isCertificate ? (
                 // Static layout — details on the left, full certificate on the right.
                 <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
