@@ -99,12 +99,12 @@ export function Awards() {
                 // Static layout — details on the left, full certificate on the right.
                 <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
                   {details}
-                  <figure className="overflow-hidden border border-zinc-300/60 bg-white">
+                  <figure className="aspect-[3/2] overflow-hidden border border-zinc-300/60 bg-white">
                     <img
                       src={award.images[0].src}
                       alt={award.images[0].caption ?? award.title}
                       loading="lazy"
-                      className="w-full object-contain"
+                      className="h-full w-full object-contain"
                     />
                   </figure>
                 </div>
