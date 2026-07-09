@@ -93,18 +93,6 @@ export function Awards() {
                   </p>
                 ))}
               </div>
-              {"tags" in award && award.tags && award.tags.length > 0 && (
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {award.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-600"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              )}
             </div>
           );
 
