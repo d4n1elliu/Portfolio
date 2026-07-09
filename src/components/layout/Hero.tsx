@@ -25,7 +25,7 @@ export function Hero() {
         {PROFILE.tagline}
       </p>
 
-      <div className="mt-10 flex flex-col items-start gap-6 border-t border-zinc-200/80 pt-8 md:flex-row md:items-center md:justify-between">
+      <div className="mt-10 flex flex-col items-start gap-6 border-t-2 border-zinc-300 pt-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-base font-semibold text-zinc-900">{PROFILE.name}</p>
           <p className="mt-1 text-sm text-zinc-600">{PROFILE.location}</p>
