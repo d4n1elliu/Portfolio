@@ -142,10 +142,10 @@ export const PROFILE = {
       title: "Named to the Dean's List 2026",
       event: "UTS Faculty of Engineering & IT",
       date: "2026",
+      layout: "certificate" as const,
       description: [
         "Recognised on the UTS Faculty of Engineering and IT Dean's List 2026 for outstanding academic achievement — a faculty initiative celebrating top-performing students across Engineering and Information Technology.",
       ],
-      tags: ["Dean's List", "Academic Achievement", "UTS"],
       images: [
         { src: "/images/awards/deans-list-2026.jpeg", caption: "Dean's List 2026 certificate, UTS Faculty of Engineering & IT" },
       ],
@@ -158,7 +158,6 @@ export const PROFILE = {
       description: [
         "Selected to present MemeSOL, a full-stack iOS crypto wallet that lets anyone create custom meme coins with no coding, in the Software category at UTS TechFest 2026, powered by the UTS Faculty of Engineering and IT.",
       ],
-      tags: ["MemeSOL", "UTS TechFest", "Software Category", "SwiftUI", "ASP.NET"],
       images: [
         { src: "/images/awards/banner.jpeg", caption: "UTS TechFest 2026, powered by the Faculty of Engineering & IT" },
         { src: "/images/awards/projectShowcase.jpeg", caption: "The MemeSOL stand in the Software category" },

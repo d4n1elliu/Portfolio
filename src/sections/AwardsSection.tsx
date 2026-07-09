@@ -68,49 +68,71 @@ export function Awards() {
       />
 
       <div className="flex flex-col gap-16">
-        {PROFILE.awards.map((award) => (
-          <Reveal key={award.title}>
-            <div className="flex flex-col gap-8">
-              {/* details */}
-              <div className="max-w-2xl">
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-600">
-                    {award.event}
-                  </span>
-                  <span className="text-xs text-zinc-600">· {award.date}</span>
-                </div>
-                <h3 className="mt-3 text-2xl font-medium leading-snug text-zinc-900">
-                  {award.title}
-                </h3>
-                {"team" in award && award.team && (
-                  <p className="mt-2 text-sm text-zinc-600">{award.team}</p>
-                )}
-                <div className="mt-4 space-y-3">
-                  {award.description.map((para) => (
-                    <p key={para} className="text-base leading-relaxed text-zinc-600">
-                      {para}
-                    </p>
+        {PROFILE.awards.map((award) => {
+          const isCertificate =
+            "layout" in award && award.layout === "certificate";
+
+          const details = (
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-600">
+                  {award.event}
+                </span>
+                <span className="text-xs text-zinc-600">· {award.date}</span>
+              </div>
+              <h3 className="mt-3 text-2xl font-medium leading-snug text-zinc-900">
+                {award.title}
+              </h3>
+              {"team" in award && award.team && (
+                <p className="mt-2 text-sm text-zinc-600">{award.team}</p>
+              )}
+              <div className="mt-4 space-y-3">
+                {award.description.map((para) => (
+                  <p key={para} className="text-base leading-relaxed text-zinc-600">
+                    {para}
+                  </p>
+                ))}
+              </div>
+              {"tags" in award && award.tags && award.tags.length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {award.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-600"
+                    >
+                      {t}
+                    </span>
                   ))}
                 </div>
-                {award.tags && award.tags.length > 0 && (
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {award.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="border border-zinc-300 px-2.5 py-1 text-xs text-zinc-600"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* photo gallery — auto-scrolling marquee, pauses on hover */}
-              <AwardGallery images={award.images} />
+              )}
             </div>
-          </Reveal>
-        ))}
+          );
+
+          return (
+            <Reveal key={award.title}>
+              {isCertificate ? (
+                // Static layout — details on the left, full certificate on the right.
+                <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
+                  {details}
+                  <figure className="overflow-hidden border border-zinc-300/60 bg-white">
+                    <img
+                      src={award.images[0].src}
+                      alt={award.images[0].caption ?? award.title}
+                      loading="lazy"
+                      className="w-full object-contain"
+                    />
+                  </figure>
+                </div>
+              ) : (
+                <div className="flex flex-col gap-8">
+                  {details}
+                  {/* photo gallery — auto-scrolling marquee, pauses on hover */}
+                  <AwardGallery images={award.images} />
+                </div>
+              )}
+            </Reveal>
+          );
+        })}
       </div>
     </Section>
   );
