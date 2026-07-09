@@ -62,10 +62,7 @@ function AwardGallery({
 export function Awards() {
   return (
     <Section id="awards" alt>
-      <SectionHeader
-        title="Honours & Awards"
-        description="Moments where my work was recognised and put in front of an audience."
-      />
+      <SectionHeader title="Honours & Awards" />
 
       <div className="flex flex-col gap-16">
         {PROFILE.awards.map((award) => {
@@ -100,7 +97,7 @@ export function Awards() {
             <Reveal key={award.title}>
               {isCertificate ? (
                 // Static layout — details on the left, full certificate on the right.
-                <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
+                <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
                   {details}
                   <figure className="overflow-hidden border border-zinc-300/60 bg-white">
                     <img

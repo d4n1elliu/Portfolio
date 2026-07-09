@@ -144,7 +144,7 @@ export const PROFILE = {
       date: "2026",
       layout: "certificate" as const,
       description: [
-        "Recognised on the UTS Faculty of Engineering and IT Dean's List 2026 for outstanding academic achievement — a faculty initiative celebrating top-performing students across Engineering and Information Technology.",
+        "Recognised for outstanding academic achievement among the faculty's top-performing students.",
       ],
       images: [
         { src: "/images/awards/deans-list-2026.jpeg", caption: "Dean's List 2026 certificate, UTS Faculty of Engineering & IT" },
@@ -156,7 +156,7 @@ export const PROFILE = {
       date: "2026",
       team: "With Sun Kim, Gurpreet Kaur & Ineshka De Mel",
       description: [
-        "Selected to present MemeSOL, a full-stack iOS crypto wallet that lets anyone create custom meme coins with no coding, in the Software category at UTS TechFest 2026, powered by the UTS Faculty of Engineering and IT.",
+        "Selected to demo MemeSOL, a full-stack iOS wallet for minting custom meme coins, live to attendees.",
       ],
       images: [
         { src: "/images/awards/banner.jpeg", caption: "UTS TechFest 2026, powered by the Faculty of Engineering & IT" },
