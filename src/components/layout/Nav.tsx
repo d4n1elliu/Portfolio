@@ -63,7 +63,7 @@ export function Nav() {
               className={`text-sm transition-colors ${
                 active === item.href
                   ? "text-zinc-900"
-                  : "text-zinc-500 hover:text-zinc-900"
+                  : "text-zinc-600 hover:text-zinc-900"
               }`}
             >
               {item.label}

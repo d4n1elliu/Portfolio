@@ -9,7 +9,7 @@ export function Hero() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600" />
         </span>
-        <span className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-500">
+        <span className="text-xs font-medium uppercase tracking-[0.18em] text-zinc-600">
           {PROFILE.availability}
         </span>
       </div>
@@ -28,7 +28,7 @@ export function Hero() {
       <div className="mt-10 flex flex-col items-start gap-6 border-t border-zinc-200/80 pt-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-base font-semibold text-zinc-900">{PROFILE.name}</p>
-          <p className="mt-1 text-sm text-zinc-500">{PROFILE.location}</p>
+          <p className="mt-1 text-sm text-zinc-600">{PROFILE.location}</p>
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <a

@@ -155,8 +155,8 @@ export function ProjectCard({
       {/* body */}
       <div className="flex flex-1 flex-col p-7">
         <div className="flex items-center justify-between gap-3">
-          <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">{tag}</span>
-          {year && <span className="text-xs text-zinc-400">{year}</span>}
+          <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-600">{tag}</span>
+          {year && <span className="text-xs text-zinc-600">{year}</span>}
         </div>
 
         <h3 className="mt-2 text-2xl font-medium text-zinc-900">{title}</h3>
@@ -175,9 +175,10 @@ export function ProjectCard({
           </div>
         )}
 
-        {/* action buttons — always two options; unavailable ones are greyed out */}
+        {/* action buttons — only render links that exist; the lead action
+            (live site, or the demo for app-only projects) is styled solid */}
         <div className="mt-6 flex flex-wrap items-center gap-3 pt-1">
-          {website ? (
+          {website && (
             <a
               href={website}
               target="_blank"
@@ -187,23 +188,14 @@ export function ProjectCard({
               <GlobeIcon />
               View website
             </a>
-          ) : (
-            <span
-              className={`${BTN_BASE} cursor-not-allowed border border-zinc-200 text-zinc-300`}
-              aria-disabled="true"
-              title="No live site available"
-            >
-              <GlobeIcon />
-              View website
-            </span>
           )}
 
-          {demo ? (
+          {demo && (
             <button
               type="button"
               onClick={() => (open ? setOpen(false) : openDemo())}
               className={`${BTN_BASE} border ${
-                open
+                open || !website
                   ? "border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-700"
                   : "border-zinc-300 text-zinc-800 hover:border-zinc-900 hover:bg-zinc-100"
               }`}
@@ -211,15 +203,6 @@ export function ProjectCard({
               {open ? <CloseIcon /> : <PlayIcon />}
               {open ? "Close demo" : "Watch demo"}
             </button>
-          ) : (
-            <span
-              className={`${BTN_BASE} cursor-not-allowed border border-zinc-200 text-zinc-300`}
-              aria-disabled="true"
-              title="Demo coming soon"
-            >
-              <PlayIcon />
-              Watch demo
-            </span>
           )}
 
           {github && (

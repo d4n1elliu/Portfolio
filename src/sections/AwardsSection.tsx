@@ -18,7 +18,7 @@ function AwardImage({ src, caption }: { src: string; caption?: string }) {
           className="aspect-[4/3] w-full object-cover"
         />
       ) : (
-        <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 bg-[#ece5d8] text-zinc-400">
+        <div className="flex aspect-[4/3] w-full flex-col items-center justify-center gap-3 bg-[#ece5d8] text-zinc-600">
           <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" strokeWidth="1.4"/>
             <path d="M4 8a2 2 0 0 1 2-2h1.5l1-2h5l1 2H18a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round"/>
@@ -74,16 +74,16 @@ export function Awards() {
               {/* details */}
               <div className="max-w-2xl">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-500">
+                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-zinc-600">
                     {award.event}
                   </span>
-                  <span className="text-xs text-zinc-400">· {award.date}</span>
+                  <span className="text-xs text-zinc-600">· {award.date}</span>
                 </div>
                 <h3 className="mt-3 text-2xl font-medium leading-snug text-zinc-900">
                   {award.title}
                 </h3>
                 {"team" in award && award.team && (
-                  <p className="mt-2 text-sm text-zinc-500">{award.team}</p>
+                  <p className="mt-2 text-sm text-zinc-600">{award.team}</p>
                 )}
                 <div className="mt-4 space-y-3">
                   {award.description.map((para) => (

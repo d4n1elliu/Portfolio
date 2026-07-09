@@ -48,7 +48,7 @@ export function About() {
                     i !== 0 ? "border-t border-zinc-300/50" : ""
                   }`}
                 >
-                  <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-500">
+                  <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">
                     {row.label}
                   </dt>
                   <dd className="text-sm font-medium text-zinc-900">{row.value}</dd>
