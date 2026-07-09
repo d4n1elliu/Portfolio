@@ -8,7 +8,7 @@ export function Education() {
   return (
     <Section id="education">
       <SectionHeader title="Education" />
-      <div className="border-t border-zinc-200">
+      <div className="border-t-2 border-zinc-300">
         {PROFILE.education.map((ed) => (
           <Reveal key={ed.org}>
             <TimelineRow period={ed.time} title={ed.org} subtitle={ed.details} />

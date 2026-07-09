@@ -17,7 +17,7 @@ export function Contact() {
           Let's build something.
         </h2>
 
-        <div className="mt-10 flex flex-col gap-8 border-t border-zinc-200 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-8 border-t-2 border-zinc-300 pt-8 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm text-zinc-600">Fastest way to reach me</p>
             <a

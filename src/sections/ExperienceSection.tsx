@@ -8,7 +8,7 @@ export function Experience() {
   return (
     <Section id="experience">
       <SectionHeader title="Experience" />
-      <div className="border-t border-zinc-200">
+      <div className="border-t-2 border-zinc-300">
         {PROFILE.experience.map((e) => (
           <Reveal key={`${e.role}-${e.org}`}>
             <TimelineRow

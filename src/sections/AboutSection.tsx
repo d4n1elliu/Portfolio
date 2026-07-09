@@ -45,7 +45,7 @@ export function About() {
                 <div
                   key={row.label}
                   className={`flex flex-col gap-1 px-5 py-4 ${
-                    i !== 0 ? "border-t border-zinc-300/50" : ""
+                    i !== 0 ? "border-t-2 border-zinc-300" : ""
                   }`}
                 >
                   <dt className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-600">

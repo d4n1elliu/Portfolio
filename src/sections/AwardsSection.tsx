@@ -93,7 +93,7 @@ export function Awards() {
           return (
             <Reveal
               key={award.title}
-              className={i > 0 ? "border-t border-zinc-200 pt-16" : ""}
+              className={i > 0 ? "border-t-2 border-zinc-300 pt-16" : ""}
             >
               {isCertificate ? (
                 // Static layout — details on the left, full certificate on the right.

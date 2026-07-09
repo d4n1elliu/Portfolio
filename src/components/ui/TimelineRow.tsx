@@ -10,7 +10,7 @@ export function TimelineRow({
   bullets?: readonly string[];
 }) {
   return (
-    <div className="grid gap-2 border-b border-zinc-200/70 py-9 md:grid-cols-4 md:gap-12">
+    <div className="grid gap-2 border-b-2 border-zinc-300 py-9 md:grid-cols-4 md:gap-12">
       <p className="text-sm font-medium text-zinc-600">{period}</p>
       <div className="md:col-span-3">
         <p className="text-lg font-medium text-zinc-900">{title}</p>

@@ -2,7 +2,7 @@ import { PROFILE } from "../../data/userProfile";
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 px-8 py-8 md:px-16">
+    <footer className="border-t-2 border-zinc-300 px-8 py-8 md:px-16">
       <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
         <p className="text-sm text-zinc-600">
           © 2025–{new Date().getFullYear()} {PROFILE.name}. Built with React, TypeScript &amp; TailwindCSS.
