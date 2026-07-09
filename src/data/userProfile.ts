@@ -139,7 +139,7 @@ export const PROFILE = {
   // and reference them below — missing images fall back to a placeholder tile.
   awards: [
     {
-      title: "Named to the Dean's List 2026",
+      title: "Faculty Dean's List Recognition",
       event: "UTS Faculty of Engineering & IT",
       date: "2026",
       layout: "certificate" as const,
@@ -151,10 +151,9 @@ export const PROFILE = {
       ],
     },
     {
-      title: "Selected to Showcase MemeSOL",
+      title: "Featured for the TechFest Software Showcase",
       event: "UTS TechFest 2026 · Software Category",
       date: "2026",
-      team: "With Sun Kim, Gurpreet Kaur & Ineshka De Mel",
       description: [
         "Selected to demo MemeSOL, a full-stack iOS wallet for minting custom meme coins, live to attendees.",
       ],

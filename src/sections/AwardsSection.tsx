@@ -80,9 +80,6 @@ export function Awards() {
               <h3 className="mt-3 text-2xl font-medium leading-snug text-zinc-900">
                 {award.title}
               </h3>
-              {"team" in award && award.team && (
-                <p className="mt-2 text-sm text-zinc-600">{award.team}</p>
-              )}
               <div className="mt-4 space-y-3">
                 {award.description.map((para) => (
                   <p key={para} className="text-base leading-relaxed text-zinc-600">
