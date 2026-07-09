@@ -2,7 +2,7 @@ export const PROFILE = {
   name: "Daniel Liu",
   headline: "Full-Stack Developer",
   tagline:
-    "Final-year Computer Science (Honours) student at UTS building fast, well-designed web applications with React, TypeScript and .NET.",
+    "Final-year Computing Science (Honours) student at UTS building fast, well-designed web applications with React, TypeScript and .NET.",
   location: "Sydney, NSW, Australia",
   email: "ziyangliu2.work@gmail.com",
   availability: "Open to 2027 graduate roles & summer internships",
@@ -15,7 +15,7 @@ export const PROFILE = {
   avatar: "/images/profile.jpg",
 
   about: [
-    "I'm a final-year Computer Science (Honours) student at UTS with a strong interest in building modern web applications that are both technically solid and thoughtfully designed.",
+    "I'm a final-year Computing Science (Honours) student at UTS with a strong interest in building modern web applications that are both technically solid and thoughtfully designed.",
     "My recent work spans React and TypeScript front-ends, ASP.NET Core back-ends and Azure deployments.",
   ],
 
@@ -24,7 +24,7 @@ export const PROFILE = {
     { label: "Based in", value: "Sydney, Australia" },
     { label: "Focus", value: "Full-stack web & interaction design" },
     { label: "Core stack", value: "React · TypeScript · .NET · Azure" },
-    { label: "Education", value: "BCompSci (Hons), UTS, 2026" },
+    { label: "Education", value: "Computing Science (Honours), UTS, 2026" },
     { label: "Status", value: "Open to grad roles & internships" },
   ],
 
